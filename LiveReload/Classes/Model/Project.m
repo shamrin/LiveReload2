@@ -493,7 +493,7 @@ BOOL MatchLastPathTwoComponents(NSString *path, NSString *secondToLastComponent,
             NSLog(@"Running post-processing command: %@", command);
 
             NSString *runDirectory = _path;
-            NSString *prefix = @"which rvm >/dev/null || source \"$HOME/.rvm/scripts/rvm\"; ";
+            NSString *prefix = @"";
             NSArray *shArgs = [NSArray arrayWithObjects:@"--login",@"-i",@"-c", [prefix stringByAppendingString:command], nil];
 
             NSError *error = nil;
